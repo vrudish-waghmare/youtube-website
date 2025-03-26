@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Position Practice</title>
+  
+  </head>
+  <body style="padding-bottom: 1000px;
+  padding-top: 60px;
+  padding-left: 80px;">
+
+  <!-- position is allows elements to add on top of another elements -->
+
+    <!--1.  static - by default every elements pistion is static 
+     2. fixed - will stick the element on the top of the page. i.e. you can now use the top, left, right, bottom property to position that element. if you give position on opposite direction , the element will stretch. if you want to resize the element then use top, bottom, left and right property otherwise use width and height to adjust the element.
+     3. absolute: same as fixed postion with left, right, bottom and left properties.but only one difference is : 
+     fixed -> placed in the browser window. i.e it dosen't move when we scroll the page.
+     absolute -> placed on the page. i.e it moves when we scroll the page.
+     relative ->if you use the position absolute inside any fixed position element then the absolute element will move relative to that fixed element. similarly if you want to position any element on another element on the page then add the relative position to the element so that abosolute element will position according to the relative element.
+    -->
+    <div style="background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 10px;
+    height: 50px;
+    z-index: 100;
+    ">header</div>
+
+    <div style="background-color: green;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 72px;">
+      sidebar
+      <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 0px;
+    top: 0px;
+    ">X</div>
+    </div>
+
+    <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 60px;
+    ">absolute</div>
+
+    <div style="background-color: lightblue;
+    height: 200px;
+    width: 200px;
+    position: static;
+    margin-top: 60px;">div 1</div>
+    <div style="background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    position: relative;">div 2
+    <div style="
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+    ">5:00</div>
+    </div>
+    
+  </body>
+</html>
